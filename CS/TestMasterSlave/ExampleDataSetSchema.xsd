@@ -1,0 +1,279 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="BusinessPartnerFullList" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="BusinessPartnerData">
+    <xs:complexType>
+	<xs:sequence>
+	  <xs:element name="BusinessPartner" minOccurs="0" maxOccurs="unbounded">
+		<xs:complexType>
+		  <xs:sequence>
+			<xs:element name="BusinessObject" minOccurs="0" maxOccurs="unbounded">
+			  <xs:complexType>
+				<xs:sequence>
+				  <xs:element name="Address" nillable="true" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+					  <xs:simpleContent msdata:ColumnName="Address_Text" msdata:Ordinal="7">
+						<xs:extension base="xs:string">
+						  <xs:attribute name="map_BusinessObject_Address__ID" type="xs:long" />
+						  <xs:attribute name="map_BusinessObject_Address__BusinessObject_ID" type="xs:long" />
+						  <xs:attribute name="map_BusinessObject_Address__Address_ID" type="xs:long" />
+						  <xs:attribute name="t_Address__ID" type="xs:long" />
+						  
+						  <xs:attribute name="t_ZIPCode__ID" type="xs:long" />
+						  <xs:attribute name="t_Country__ID" type="xs:long" />
+						  <xs:attribute name="t_Country__TaxNumberFormat">
+
+							<xs:simpleType>
+							  <xs:restriction base="xs:string">
+								<xs:minLength value="0" />
+								<xs:maxLength value="255" />
+							  </xs:restriction>
+							</xs:simpleType>
+						  </xs:attribute>
+						</xs:extension>
+					  </xs:simpleContent>
+					</xs:complexType>
+				  </xs:element>
+				  <xs:element name="PhoneNumber" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+					  <xs:attribute name="t_ContactData__ID" type="xs:long" />
+					  <xs:attribute name="t_ContactData__CommunicationTarget_ID" type="xs:long" />
+					  <xs:attribute name="t_ContactData__AreaCode">
+						<xs:simpleType>
+						  <xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="255" />
+						  </xs:restriction>
+						</xs:simpleType>
+					  </xs:attribute>
+					  <xs:attribute name="t_ContactData__Number">
+						<xs:simpleType>
+						  <xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="255" />
+						  </xs:restriction>
+						</xs:simpleType>
+					  </xs:attribute>
+					  <xs:attribute name="t_ContactData__CallThrough">
+						<xs:simpleType>
+						  <xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="255" />
+						  </xs:restriction>
+						</xs:simpleType>
+					  </xs:attribute>
+					  <xs:attribute name="t_ContactData__Email">
+						<xs:simpleType>
+						  <xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="255" />
+						  </xs:restriction>
+						</xs:simpleType>
+					  </xs:attribute>
+					  <xs:attribute name="t_ContactData__ShowFormat">
+						<xs:simpleType>
+						  <xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="255" />
+						  </xs:restriction>
+						</xs:simpleType>
+					  </xs:attribute>
+					  <xs:attribute name="t_ContactData__Country_ID" type="xs:long" />
+					  <xs:attribute name="map_BusinessObject_ContactData__ID" type="xs:long" />
+					  <xs:attribute name="map_BusinessObject_ContactData__BusinessObject_ID" type="xs:long" />
+					  <xs:attribute name="map_BusinessObject_ContactData__ContactData_ID" type="xs:long" />
+					  <xs:attribute name="map_BusinessObject_ContactData__MainRecord" type="xs:boolean" default="false" />
+					  <xs:attribute name="t_Icon__ID" type="xs:long" />
+					  <xs:attribute name="t_Icon__ImageData" type="xs:base64Binary" />
+  					  <xs:attribute name="t_CommunicationType__ID" type="xs:long" />
+					  <xs:attribute name="t_CommunicationType__FunctionCall">
+						<xs:simpleType>
+						  <xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="255" />
+						  </xs:restriction>
+						</xs:simpleType>
+					  </xs:attribute>
+					  <xs:attribute name="t_CommunicationTarget__Description">
+						<xs:simpleType>
+						  <xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="255" />
+						  </xs:restriction>
+						</xs:simpleType>
+					  </xs:attribute>
+					  <xs:attribute name="t_CommunicationType__Description">
+						<xs:simpleType>
+						  <xs:restriction base="xs:string">
+							<xs:minLength value="0" />
+							<xs:maxLength value="255" />
+						  </xs:restriction>
+						</xs:simpleType>
+					  </xs:attribute>
+					  <xs:attribute name="t_CommunicationType__IsPhoneNumber" type="xs:boolean" />
+					</xs:complexType>
+				  </xs:element>
+				</xs:sequence>
+				<xs:attribute name="t_BusinessObject__ID" type="xs:long" />
+				<xs:attribute name="t_BusinessObject__BusinessPartner_ID" type="xs:long" />
+				<xs:attribute name="t_BusinessObject__Number" type="xs:long" />
+				<xs:attribute name="t_BusinessObject__Name">
+				  <xs:simpleType>
+					<xs:restriction base="xs:string">
+					  <xs:minLength value="0" />
+					  <xs:maxLength value="255" />
+					</xs:restriction>
+				  </xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="t_BusinessObject__BusinessObjectType_ID" type="xs:long" />
+				<xs:attribute name="t_BusinessObject__SupplierRestriction_ID" type="xs:long" />
+				<xs:attribute name="t_BusinessObject__BusinessCalendar_ID" type="xs:long" />
+				<xs:attribute name="t_BusinessObject__ShippingTime" type="xs:long" />
+				<xs:attribute name="t_BusinessCalendar_DisplayFormat">
+				<xs:simpleType>
+				<xs:restriction base="xs:string">
+				<xs:minLength value="0" />
+				<xs:maxLength value="255" />
+				</xs:restriction>
+				</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="t_SupplierRestriction_DisplayFormat">
+				<xs:simpleType>
+				<xs:restriction base="xs:string">
+				<xs:minLength value="0" />
+				<xs:maxLength value="255" />
+				</xs:restriction>
+				</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="t_DeliveryCondition_DisplayFormat">
+				<xs:simpleType>
+				<xs:restriction base="xs:string">
+				<xs:minLength value="0" />
+				<xs:maxLength value="255" />
+				</xs:restriction>
+				</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="t_ShippingMethod_DisplayFormat">
+				<xs:simpleType>
+				<xs:restriction base="xs:string">
+				<xs:minLength value="0" />
+				<xs:maxLength value="255" />
+				</xs:restriction>
+				</xs:simpleType>
+				</xs:attribute>	
+				<xs:attribute name="t_BusinessObject__DeliveryCondition_ID" type="xs:long" />
+				<xs:attribute name="t_BusinessObject__ShippingMethod_ID" type="xs:long" />
+			  </xs:complexType>
+			</xs:element>
+		  </xs:sequence>
+		  <xs:attribute name="t_BusinessPartner__ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__Number" type="xs:long"/>
+		  <xs:attribute name="t_BusinessPartner__SearchTerm">
+			<xs:simpleType>
+			  <xs:restriction base="xs:string">
+				<xs:minLength value="0" />
+				<xs:maxLength value="255" />
+			  </xs:restriction>
+			</xs:simpleType>
+		  </xs:attribute>
+		  <xs:attribute name="t_BusinessPartner__Salutation_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__Name">
+			<xs:simpleType>
+			  <xs:restriction base="xs:string">
+				<xs:minLength value="0" />
+				<xs:maxLength value="255" />
+			  </xs:restriction>
+			</xs:simpleType>
+		  </xs:attribute>
+		  <xs:attribute name="t_BusinessPartner__Employee_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__VoucherEmployee_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__ConcernedUnit_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__OwnNumberAtObject">
+			<xs:simpleType>
+			  <xs:restriction base="xs:string">
+				<xs:minLength value="0" />
+				<xs:maxLength value="255" />
+			  </xs:restriction>
+			</xs:simpleType>
+		  </xs:attribute>
+		  <xs:attribute name="t_BusinessPartner__ObjectType_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__ObjectMethod_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__BusinessPartnerType_ID" type="xs:long" default="1" />
+		  <xs:attribute name="t_BusinessPartner__StateDefinition_ID" type="xs:long" default="1" />
+		  <xs:attribute name="t_BusinessPartner__PartnerSinceDate" type="xs:dateTime" />
+		  <xs:attribute name="t_BusinessPartner__Language_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__InvoiceBusinessPartner_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__Currency_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__PriceGroup_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__DiscountGroup_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__PaymentTerm_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__PaymentMethod_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__PriceHowBusinessPartner_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__InvoiceInterval_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__CollectionInvoice" type="xs:boolean" />
+		  <xs:attribute name="t_BusinessPartner__ConcernBusinessPartner_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__LineOfCredit" type="xs:decimal" />
+		  <xs:attribute name="t_BusinessPartner__LineOfCreditObserve" type="xs:boolean" />
+		  <xs:attribute name="t_BusinessPartner__VATNumber">
+			<xs:simpleType>
+			  <xs:restriction base="xs:string">
+				<xs:minLength value="0" />
+				<xs:maxLength value="255" />
+			  </xs:restriction>
+			</xs:simpleType>
+		  </xs:attribute>
+		  <xs:attribute name="t_BusinessPartner__VATNumberConfirmed" type="xs:boolean" />
+		  <xs:attribute name="t_BusinessPartner__TaxPayer">
+			<xs:simpleType>
+			  <xs:restriction base="xs:string">
+				<xs:minLength value="0" />
+				<xs:maxLength value="255" />
+			  </xs:restriction>
+			</xs:simpleType>
+		  </xs:attribute>
+		  <xs:attribute name="t_BusinessPartner__FinanceManagementKey" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__AccountingGroup_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__DunningGroup_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__InterestTermGroup_ID" type="xs:long" />
+		  <xs:attribute name="t_BusinessPartner__TaxCalculate" type="xs:boolean" />
+		  <xs:attribute name="t_BusinessPartner__MinimumOrderValue" type="xs:decimal" />
+		  <xs:attribute name="t_BusinessPartner__LineOfCreditPassed" type="xs:boolean" />
+		  <xs:attribute name="t_Salutation_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_StateDefinition_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_Employee_DisplayFormat" type="xs:string" />	  
+		  <xs:attribute name="ContactVoucher_DisplayFormat" type="xs:string" />  
+		  <xs:attribute name="t_ConcernedUnit_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_Language_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_Language__Description" type="xs:string" default=""/>
+		  <xs:attribute name="t_ObjectMethod_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_Currency_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="InvoiceInterval_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="InvoiceCustomer_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="ConcernCustomer_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="FinanceMngmtAccount_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_AccountingGroup_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_DunningGroup_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_InterestTermsGroup_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_PaymentTerm_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_PaymentMethod_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_PriceGroup_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="t_DiscountGroup_DisplayFormat" type="xs:string" />
+		  <xs:attribute name="PriceHowBaseObject_DisplayFormat" type="xs:string" />
+		   <xs:attribute name="t_ZIPCode__ZIPCode" type="xs:string" />
+		   <xs:attribute name="t_ZIPCode__Place" type="xs:string" default=""/>
+		 <xs:attribute name="t_StateDefinition__Description" type="xs:string" default=""/>
+		   <xs:attribute name="t_Employee__Name" type="xs:string" default=""/>
+						  <xs:attribute name="t_Country__Description" type="xs:string" default=""/>
+						  <xs:attribute name="t_Address__Street" type="xs:string" default=""/>
+		</xs:complexType>
+	  </xs:element>
+	  </xs:sequence>
+	 </xs:complexType>
+  </xs:element>
+  	  <xs:element name="BusinessPartnerFullList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+		<xs:complexType>
+		  <xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element ref="BusinessPartnerData" />
+		  </xs:choice>
+		</xs:complexType>
+	  </xs:element>
+</xs:schema>

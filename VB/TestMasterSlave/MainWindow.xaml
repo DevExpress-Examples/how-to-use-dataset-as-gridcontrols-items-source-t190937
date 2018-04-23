@@ -1,0 +1,40 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" x:Class="TestMasterSlave.MainWindow"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="280"/>
+        </Grid.RowDefinitions>
+        
+        <dxg:GridControl Grid.Row="0" x:Name="Master" AutoPopulateColumns="True" EnableSmartColumnsGeneration="True"
+                         
+            ItemsSource="{Binding BusinessPartnerData/BusinessPartnerData_BusinessPartner}" >
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn Header="Number" SortIndex="0" DisplayMemberBinding="{Binding t_BusinessPartner__Number, Mode=TwoWay}" />
+                <dxg:GridColumn Header="Name" DisplayMemberBinding="{Binding t_BusinessPartner__Name, Mode=TwoWay}" />
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView ShowTotalSummary="False" IsSynchronizedWithCurrentItem="True"/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+
+        <dxg:GridControl Grid.Row="1" x:Name="Slave" EnableSmartColumnsGeneration="True"
+         ItemsSource="{Binding CurrentItem.BusinessPartner_BusinessObject/BusinessObject_PhoneNumber, ElementName=Master}" 
+                         
+                         >
+            <dxg:GridControl.Columns>
+                <dxg:GridColumn Header="AreaCode" SortIndex="0" DisplayMemberBinding="{Binding t_ContactData__AreaCode, Mode=TwoWay}" />
+                <dxg:GridColumn Header="Number" DisplayMemberBinding="{Binding t_ContactData__Number, Mode=TwoWay}" />
+                <dxg:GridColumn Header="Ext" DisplayMemberBinding="{Binding t_ContactData__CallThrough, Mode=TwoWay}" />
+                <dxg:GridColumn Header="E-Mail" DisplayMemberBinding="{Binding t_ContactData__Email, Mode=TwoWay}" />
+            </dxg:GridControl.Columns>
+            <dxg:GridControl.View>
+                <dxg:TableView ShowTotalSummary="False" IsSynchronizedWithCurrentItem="False"/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+
+    </Grid>
+</Window>
